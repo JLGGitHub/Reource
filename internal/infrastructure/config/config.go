@@ -17,7 +17,7 @@ func NewConfig() *Config {
 		log.Println("No .env file found, loading from environment variables")
 	}
 	return &Config{
-		DatabaseDSN: getEnv("DATABASE_DSN", "root:admin123@tcp(db:3306)/users?parseTime=true"),
+		DatabaseDSN: getEnv("DATABASE_DSN", "root:admin123@tcp(localhost:3306)/resource?parseTime=true"),
 		ServerPort:  getEnv("SERVER_PORT", "8081"),
 	}
 }
